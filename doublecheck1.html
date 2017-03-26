@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!-- HTML5 Hello world by kirupa - http://www.kirupa.com/html5/getting_your_feet_wet_html5_pg1.htm -->
+<html lang="en-us">
+
+<head>
+<meta charset="utf-8">
+<title>Hello...</title>
+<style type="text/css">
+#mainContent {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: xx-large;
+	font-weight: bold;
+	background-color: #1E90FF;
+	border-radius: 4px;
+	padding: 10px;
+	text-align: center;
+}
+
+#secondContent {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: xx-large;
+	font-weight: bold;
+	background-color: #1E90FF;
+	border-radius: 4px;
+	padding: 10px;
+	text-align: left;
+}
+
+.buttonStyle {
+	border-radius: 4px;
+	border: thin solid #F0E020;
+	padding: 5px;
+	background-color:  	#FFA500;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	font-weight: bold;
+	color: #663300;
+	width: 140px;
+}
+
+.buttonStyle:hover {
+	border: thin solid #FFCC00;
+	background-color: #FCF9D6;
+	color: #996633;
+	cursor: pointer;
+}
+.buttonStyle:active {
+	border: thin solid #99CC00;
+	background-color: #F5FFD2;
+	color: #669900;
+	cursor: pointer;
+}
+
+.divStyle {
+	display: flex;
+	justify-content: center;
+}
+
+</style>
+</head>
+<div id="secondContent">
+<button class="buttonStyle" href="space-adventure.html">Home</button>
+</div>
+<body>
+<div id="mainContent">
+	<p id="helloText">You made it to space! Congrats...Oh no! There's an asteroid coming your way! Which way do you move?</p>
+	<div class="divStyle">
+		<button class="buttonStyle" href="left1.html">Left is the best!</button>
+		<button class="buttonStyle" href="nothing1.html">Why do I have to move? Tell the asteroid to politely change its course.</button>
+		<button class="buttonStyle" href="right1.html">Right is obviously the right choice.</button>
+	</div>
+</div>
+<script>
+var all_buttons = document.querySelectorAll("button.buttonStyle"), i;
+
+for(i = 0; i < all_buttons.length; ++i) {
+    all_buttons[i].addEventListener('click', doSomething);
+}
+
+function doSomething() {
+    window.location = this.getAttribute("href");
+}
+</script>
+
+</body>
+</html>
