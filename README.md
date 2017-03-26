@@ -1,3 +1,3 @@
 # HS-Hack-Project
 
-> "Mason was here"
+This is a simple choose your own adventure game
